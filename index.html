@@ -21,6 +21,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <style>
+    /* Critical CSS to prevent CLS */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .site-header {
+      background: #0d1b2a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-logo .logo-icon {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+  </style>
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
@@ -93,7 +117,7 @@
   <header class="site-header">
     <div class="header-top">
       <a href="index.html" class="header-logo">
-        <img src="/apple-touch-icon.png" alt="GlobalSecurity" class="logo-icon">
+        <img src="/apple-touch-icon.png" alt="GlobalSecurity" class="logo-icon" width="40" height="40" fetchpriority="high">
         <div>
           <div class="logo-text">GlobalSecurity</div>
           <div class="logo-sub">Infrastructure Securisee</div>
