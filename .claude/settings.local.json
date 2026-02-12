@@ -16,7 +16,9 @@
       "Bash(git branch:*)",
       "Bash(echo \"cd \"\"c:\\\\Users\\\\yamy\\\\Desktop\\\\globalsecurity\"\" && git push -u origin main\")",
       "Bash(git remote remove:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
     ]
   }
 }

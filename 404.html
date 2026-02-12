@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page non trouvée - 404 | GlobalSecurity</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-page {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .error-container {
+      max-width: 600px;
+      text-align: center;
+    }
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .error-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .error-message {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .error-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .error-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    .error-btn:hover {
+      background: var(--accent-dark);
+    }
+    .error-btn-secondary {
+      background: var(--bg-card);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+    .error-btn-secondary:hover {
+      background: var(--bg);
+      border-color: var(--accent);
+    }
+    .search-box {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .popular-pages {
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .popular-pages h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .popular-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .popular-list li {
+      margin-bottom: 0.75rem;
+    }
+    .popular-list a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .popular-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo">
+        <img src="/apple-touch-icon.png" alt="GlobalSecurity" class="logo-icon">
+        <div>
+          <div class="logo-text">GlobalSecurity</div>
+          <div class="logo-sub">Infrastructure Securisee</div>
+        </div>
+      </a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <ul class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li>
+          <li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li>
+          <li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li>
+          <li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li>
+          <li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li>
+          <li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li>
+          <li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li>
+          <li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li>
+          <li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li>
+          <li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li>
+          <li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li>
+          <li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li>
+          <li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li>
+          <li><a href="conclusion.html"><span class="nav-num">13</span>Conclusion</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="error-page">
+      <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page non trouvée</h1>
+        <p class="error-message">
+          Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+          Utilisez le menu de navigation ci-dessus ou retournez à la page d'accueil.
+        </p>
+
+        <div class="error-links">
+          <a href="/" class="error-btn">Retour à l'accueil</a>
+          <a href="javascript:history.back()" class="error-btn error-btn-secondary">Page précédente</a>
+        </div>
+
+        <div class="popular-pages">
+          <h3>Pages les plus consultées</h3>
+          <ul class="popular-list">
+            <li><a href="matrice-risques.html">→ Analyse de Risques (EBIOS Risk Manager)</a></li>
+            <li><a href="gestion-reseau.html">→ Infrastructure Réseau (Segmentation VLAN, NGFW)</a></li>
+            <li><a href="confidentialite.html">→ Protection des Données (Conformité RGPD)</a></li>
+            <li><a href="gestion-acces.html">→ Contrôle d'Accès (IAM, MFA, PAM)</a></li>
+            <li><a href="sauvegardes.html">→ Continuité & Sauvegardes (Stratégie 3-2-1)</a></li>
+            <li><a href="surveillance.html">→ Détection des Menaces (IDS/IPS, SOC)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Dossier de Securisation de l'Infrastructure &copy; 2026 GlobalSecurity
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
