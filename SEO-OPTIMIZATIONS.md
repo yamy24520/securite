@@ -40,10 +40,13 @@
 - og:title, og:description, og:type, og:url
 - Optimized for social media sharing
 
-### ✅ 7. Structured Data (Schema.org)
+### ✅ 7. Structured Data (Schema.org) - Microdonnées
 - **Status**: COMPLETE
-- schema.json with TechArticle markup
-- Helps search engines understand content
+- **Organization schema** on all 15 pages (company info, logo, contact)
+- **BreadcrumbList schema** on 14 content pages (fil d'Ariane for SERP)
+- **TechArticle schema** on 13 content pages (author, publisher, dates, headline)
+- Fixes: "Cette page ne comporte pas de microdonnées"
+- Improves rich snippets in Google search results
 
 ### ✅ 8. Sitemap XML
 - **Status**: COMPLETE
@@ -149,9 +152,10 @@ While the current structure is good, we could add:
 - ✅ No broken links
 - ✅ Image alt tags (logo)
 - ✅ Structured navigation
-- ✅ Breadcrumbs
+- ✅ Breadcrumbs (HTML + Schema.org)
 - ✅ Footer copyright
 - ✅ Valid HTML5
+- ✅ Schema.org structured data (Organization, BreadcrumbList, TechArticle)
 
 ## Summary
 
@@ -163,7 +167,7 @@ All high and medium priority SEO optimizations requested have been successfully 
 4. ✅ **Meta tags** (description, keywords, OG) optimized
 5. ✅ **Sitemap & Robots.txt** configured
 6. ✅ **Performance** optimized (.htaccess caching/compression)
-7. ✅ **Structured data** (schema.json)
+7. ✅ **Structured data** (Organization, BreadcrumbList, TechArticle schemas)
 
 The site is now fully optimized for search engines with a focus on French cybersecurity and regulatory compliance keywords.
 
