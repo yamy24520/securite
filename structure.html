@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structure du Dossier | GlobalSecurity</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <style>
+  :root {
+    --primary: #0d1b2a;
+    --bg: #fafbfc;
+    --bg-card: #ffffff;
+    --border: #e5e7eb;
+    --text: #1f2937;
+    --radius: 4px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .site-header {
+    background: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+  .main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+  }
+  .section-card,
+  .home-hero {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+  }
+  .page-header {
+    margin-bottom: 2rem;
+  }
+</style>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo">
+        <img src="/apple-touch-icon.png" alt="GlobalSecurity" class="logo-icon" width="40" height="40" fetchpriority="high">
+        <div>
+          <div class="logo-text">GlobalSecurity</div>
+          <div class="logo-sub">Infrastructure Securisee</div>
+        </div>
+      </a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <ul class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li>
+          <li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li>
+          <li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li>
+          <li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li>
+          <li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li>
+          <li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li>
+          <li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li>
+          <li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li>
+          <li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li>
+          <li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li>
+          <li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li>
+          <li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li>
+          <li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li>
+          <li><a href="conclusion.html"><span class="nav-num">13</span>Conclusion</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Structure Organisationnelle</h1>
+      <p class="page-subtitle">Organisation et barème d'évaluation</p>
+    </div>
+
+    <div class="section-card">
+      <h2>0. INTRODUCTION & CADRAGE</h2>
+      <ul class="content-list">
+        <li>0.1 Contexte général du projet</li>
+        <li>0.2 Normes et réglementations de référence</li>
+        <li>Évaluation des risques selon EBIOS</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>1. INFRASTRUCTURE RÉSEAU <span style="color: #6b7280;">[E02 / E03 – 5 pts]</span></h2>
+      <ul class="content-list">
+        <li>1.1 Conception réseau sécurisée avec segmentation par VLAN</li>
+        <li>1.2 Protection périmétrique via Next-Generation Firewall</li>
+        <li>1.3 Accès à distance sécurisé</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>2. SYSTÈMES D'EXPLOITATION <span style="color: #6b7280;">[E02 / E03 – 5 pts]</span></h2>
+      <ul class="content-list">
+        <li>2.1 Migration OS et uniformisation des versions</li>
+        <li>2.2 Renforcement système (Security Hardening)</li>
+        <li>2.3 Stratégie de mise à jour corrective</li>
+        <li>2.4 Solution antivirale et détection avancée (EDR)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>3. GESTION DOCUMENTAIRE ET DONNÉES <span style="color: #6b7280;">[E02 / E03 – 5 pts]</span></h2>
+      <ul class="content-list">
+        <li>3.1 Catégorisation des informations / Niveaux de service</li>
+        <li>3.2 Solutions de stockage et structuration</li>
+        <li>3.3 Archivage et cycle de vie documentaire</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>4. PROTECTION DE L'INFORMATION <span style="color: #6b7280;">[E02 / E03 – 5 pts]</span></h2>
+      <ul class="content-list">
+        <li>4.1 Chiffrement des données sensibles</li>
+        <li>4.2 Mise en conformité au Règlement Général sur la Protection des Données</li>
+        <li>4.3 Prévention des fuites d'information (DLP)</li>
+        <li>4.4 Sécurisation des communications électroniques</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>5. CONTRÔLE DES IDENTITÉS ET HABILITATIONS <span style="color: #6b7280;">[E02 / E03 – 6 pts]</span></h2>
+      <ul class="content-list">
+        <li>5.1 Administration des identités numériques (IAM)</li>
+        <li>5.2 Règles de complexité des mots de passe</li>
+        <li>5.3 Contrôle des comptes à privilèges élevés (PAM)</li>
+        <li>5.4 Authentification renforcée par double facteur</li>
+        <li>5.5 Gestion du cycle de vie des utilisateurs</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>6. PLAN DE CONTINUITÉ ET RESTAURATION <span style="color: #6b7280;">[E02 / E03 – 4 pts]</span></h2>
+      <ul class="content-list">
+        <li>6.1 Application du principe 3-2-1 pour les sauvegardes (PSSI 6.5 / DORA Art.12)</li>
+        <li>6.2 Planification différenciée selon la criticité métier</li>
+        <li>6.3 Validation périodique des procédures de récupération (PSSI 6.5 / DORA Art.12)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>7. AUDIT ET JOURNALISATION <span style="color: #6b7280;">[E04 – A, B, C – 15 pts]</span></h2>
+      <ul class="content-list">
+        <li>7.1 Enregistrement systématique des événements (Logs)</li>
+        <li>7.2 Corrélation centralisée via plateforme SIEM</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>8. DÉTECTION ET RÉPONSE AUX MENACES <span style="color: #6b7280;">[E04 – B – 6 pts]</span></h2>
+      <ul class="content-list">
+        <li>8.1 Supervision permanente de la sécurité</li>
+        <li>8.2 Systèmes de prévention et détection d'intrusions</li>
+        <li>8.3 Renseignement sur les cybermenaces</li>
+        <li>8.4 Centre opérationnel de cybersécurité</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>9. ADMINISTRATION DES MODIFICATIONS <span style="color: #6b7280;">[E04 – C – 4 pts]</span></h2>
+      <ul class="content-list">
+        <li>9.1 Cadre méthodologique ITIL pour les changements</li>
+        <li>9.2 Isolation des plateformes de développement, test et production</li>
+        <li>9.3 Base de données de gestion des configurations (CMDB)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>10. SUPERVISION OPÉRATIONNELLE <span style="color: #6b7280;">[E04 – D – 6 pts]</span></h2>
+      <ul class="content-list">
+        <li>10.1 Contrôle des ressources d'infrastructure</li>
+        <li>10.2 Surveillance des applications métier</li>
+        <li>10.3 Alerting sécurité et gestion des incidents</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>11. VALIDATION ET AUDITS SÉCURITÉ <span style="color: #6b7280;">[E04/E06 – E – 6 pts]</span></h2>
+      <ul class="content-list">
+        <li>11.1 Scans de vulnérabilités en continu</li>
+        <li>11.2 Évaluations par tests d'intrusion (Pentest)</li>
+        <li>11.3 Exercices de reprise d'activité (PRA/PCA)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>12. ACTUALISATION LOGICIELLE <span style="color: #6b7280;">[E04 – F – 6 pts]</span></h2>
+      <ul class="content-list">
+        <li>12.1 Stratégie de déploiement des correctifs</li>
+        <li>12.2 Orchestration via solutions centralisées (WSUS / SCCM / Intune)</li>
+        <li>12.3 Mise à jour des bases antivirales</li>
+        <li>12.4 Maintenance de la documentation technique</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>13. SYNTHÈSE FINALE</h2>
+      <ul class="content-list">
+        <li>Éléments clés du dispositif proposé</li>
+        <li>Feuille de route et jalons</li>
+        <li>Validation formelle (Consultant / RSSI / DPO)</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Dossier de Securisation de l'Infrastructure &copy; 2026 GlobalSecurity
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
