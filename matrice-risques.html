@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrice de Risque - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li>
+      <li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li>
+      <li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li>
+      <li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li>
+      <li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li>
+      <li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li>
+      <li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li>
+      <li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li>
+      <li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li>
+      <li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li>
+      <li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li>
+      <li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li>
+      <li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li>
+      <li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li>
+      <li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Matrice de Risque</div>
+      <h1>Matrice de Risque</h1>
+      <p class="page-subtitle">Identification des menaces, evaluation et priorisation des mesures de traitement</p>
+      <div class="page-meta">
+        <span class="meta-tag info">EBIOS Risk Manager</span>
+        <span class="meta-tag info">NIS2 / DORA</span>
+        <span class="meta-tag info">12 risques identifies</span>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">M</span> Methode de cotation</h2>
+      <p>La matrice de risque identifie les menaces pesant sur le SI, evalue leur probabilite et leur impact, puis priorise les mesures de traitement. Elle est conforme a la methode EBIOS Risk Manager (ANSSI) et aux exigences NIS2 / DORA (gestion des risques ICT).</p>
+
+      <div class="info-box info">
+        <div class="info-title">Formule</div>
+        Criticite = Probabilite &times; Impact &nbsp;|&nbsp; Seuil d'acceptabilite : &le; 4
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Niveau</th><th>Probabilite</th><th>Impact</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 &ndash; Faible</strong></td><td>Rare (&lt; 1 fois / 3 ans)</td><td>Impact mineur, pas d'interruption de service</td></tr>
+            <tr><td><strong>2 &ndash; Moyen</strong></td><td>Occasionnel (1 fois / an)</td><td>Impact limite, service degrade &lt; 4h</td></tr>
+            <tr><td><strong>3 &ndash; Fort</strong></td><td>Probable (plusieurs fois / an)</td><td>Impact significatif, arret partiel, perte donnees</td></tr>
+            <tr><td><strong>4 &ndash; Critique</strong></td><td>Quasi-certain (recurrent)</td><td>Impact majeur : atteinte RGPD, arret total, perte financiere</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">R</span> Matrice des risques identifies</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Menace / Risque</th><th>Actif concerne</th><th>Prob.</th><th>Impact</th><th>Crit.</th><th>Mesures de traitement</th><th>Ref.</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>R01</strong></td><td>Acces RDP direct expose sur IP publique</td><td>Serveurs Windows</td><td>4</td><td>4</td><td class="risk-critical">16</td><td>Suppression RDP public, VPN SSL + MFA, bastion d'administration</td><td>NIS2 Art.21 / DORA</td></tr>
+            <tr><td><strong>R02</strong></td><td>Ransomware / chiffrement de donnees critiques</td><td>Serveurs fichiers, sauvegardes</td><td>3</td><td>4</td><td class="risk-high">12</td><td>EDR, sauvegardes 3-2-1 offline, segmentation VLAN, monitoring SIEM</td><td>RGPD Art.32 / NIS2</td></tr>
+            <tr><td><strong>R03</strong></td><td>Fuite ou divulgation de donnees personnelles</td><td>BDD clients, RH</td><td>2</td><td>4</td><td class="risk-medium">8</td><td>Chiffrement AES-256, DLP, gestion habilitations, journalisation</td><td>RGPD Art.5/32/33</td></tr>
+            <tr><td><strong>R04</strong></td><td>Elevation de privileges / compromission compte admin</td><td>Active Directory</td><td>2</td><td>4</td><td class="risk-medium">8</td><td>PAM, MFA admin, audit comptes, principe moindre privilege</td><td>NIS2 / PSSI</td></tr>
+            <tr><td><strong>R05</strong></td><td>Absence de segmentation reseau (propagation laterale)</td><td>Reseau interne</td><td>3</td><td>3</td><td class="risk-high">9</td><td>VLANs segmentes, NGFW, regles DENY ALL par defaut</td><td>NIS2 Art.21</td></tr>
+            <tr><td><strong>R06</strong></td><td>OS obsoletes (Windows 2012 non supporte)</td><td>Serveurs applicatifs</td><td>3</td><td>3</td><td class="risk-high">9</td><td>Migration Windows Server 2022, plan de mise a jour WSUS</td><td>NIS2 / CIS</td></tr>
+            <tr><td><strong>R07</strong></td><td>Indisponibilite d'un service critique (PRA/PRI)</td><td>Infra complete</td><td>2</td><td>4</td><td class="risk-medium">8</td><td>Plan de reprise (PRI/PCA), tests trimestriels, sauvegardes hors site</td><td>DORA Art.11 / NIS2</td></tr>
+            <tr><td><strong>R08</strong></td><td>Attaque phishing / ingenierie sociale</td><td>Utilisateurs, messagerie</td><td>3</td><td>3</td><td class="risk-high">9</td><td>Sensibilisation, S/MIME, filtrage email, MFA, procedure signalement</td><td>NIS2 / CI</td></tr>
+            <tr><td><strong>R09</strong></td><td>Non-conformite RGPD (absence de registre, DPA)</td><td>Traitements donnees</td><td>2</td><td>3</td><td class="risk-medium">6</td><td>Registre traitements, DPO, PIA, clauses sous-traitants</td><td>RGPD Art.30/35/28</td></tr>
+            <tr><td><strong>R10</strong></td><td>Defaillance fournisseur tiers / cloud</td><td>Sauvegardes cloud, SaaS</td><td>2</td><td>3</td><td class="risk-medium">6</td><td>Contrats SLA, audits tiers, plan B hebergement alternatif</td><td>DORA Art.28 / NIS2</td></tr>
+            <tr><td><strong>R11</strong></td><td>Absence de journalisation et de detection d'incidents</td><td>Ensemble SI</td><td>2</td><td>3</td><td class="risk-medium">6</td><td>SIEM, SOC, retention logs 1 an, alerting temps reel</td><td>NIS2 Art.23 / PSSI</td></tr>
+            <tr><td><strong>R12</strong></td><td>Violation de disponibilite &gt; RTO/RPO definis</td><td>Applications metier</td><td>2</td><td>3</td><td class="risk-medium">6</td><td>Monitoring 24/7, alertes Nagios/Zabbix, SLA contractuels</td><td>DORA Art.12</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">L</span> Legende criticite</h2>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot low"></span> 1&ndash;4 : Risque acceptable</div>
+        <div class="legend-item"><span class="legend-dot medium"></span> 5&ndash;8 : Risque a surveiller (plan d'action)</div>
+        <div class="legend-item"><span class="legend-dot high"></span> 9&ndash;12 : Risque eleve (traitement prioritaire)</div>
+        <div class="legend-item"><span class="legend-dot critical"></span> 13&ndash;16 : Risque critique (action immediate)</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

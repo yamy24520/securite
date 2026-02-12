@@ -1,0 +1,20 @@
+# Fichiers temporaires
+*.tmp
+*.log
+*~
+.DS_Store
+Thumbs.db
+
+# Fichiers extraits (garder seulement le site web)
+extract.txt
+tables.txt
+*.docx
+
+# Fichiers Windows
+nul
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan et Budget - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Plan et Budget</div>
+      <h1>13. Plan de Mise en Oeuvre et Budget</h1>
+      <p class="page-subtitle">Phasage de deploiement et estimation budgetaire</p>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">13.1</span> Phasage de deploiement</h2>
+
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Phase</th><th>Periode</th><th>Actions prioritaires</th><th>Priorite</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1</strong></td>
+            <td>Mois 1-2</td>
+            <td>Securisation urgente : VPN+MFA, suppression RDP, NGFW, chiffrement donnees critiques, audit initial</td>
+            <td><span class="meta-tag critical">CRITIQUE</span></td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2</strong></td>
+            <td>Mois 3-4</td>
+            <td>Segmentation reseau : VLANs, routage inter-VLAN, durcissement firewall interne</td>
+            <td><span class="meta-tag critical">ELEVEE</span></td>
+          </tr>
+          <tr>
+            <td><strong>Phase 3</strong></td>
+            <td>Mois 5-6</td>
+            <td>Modernisation OS : migration, hardening, deploiement EDR, formation equipes</td>
+            <td><span class="meta-tag high">HAUTE</span></td>
+          </tr>
+          <tr>
+            <td><strong>Phase 4</strong></td>
+            <td>Mois 7-9</td>
+            <td>Monitoring et Automatisation : SIEM, patch management auto, tests automatiques, industrialisation sauvegardes</td>
+            <td><span class="meta-tag standard">STANDARD</span></td>
+          </tr>
+          <tr>
+            <td><strong>Phase 5</strong></td>
+            <td>Mois 10-12</td>
+            <td>Optimisation et Documentation : audit conformite PSSI/CI, tests PRI complets, formation utilisateurs, documentation finale</td>
+            <td><span class="meta-tag standard">CONTINUE</span></td>
+          </tr>
+        </tbody>
+      </table></div>
+
+      <h3>Timeline visuelle</h3>
+      <div class="timeline">
+        <div class="timeline-item critical">
+          <h4>Phase 1 - Securisation urgente</h4>
+          <div class="timeline-period">Mois 1-2</div>
+          <p>VPN+MFA, suppression RDP, NGFW, chiffrement donnees critiques, audit initial</p>
+        </div>
+        <div class="timeline-item critical">
+          <h4>Phase 2 - Segmentation reseau</h4>
+          <div class="timeline-period">Mois 3-4</div>
+          <p>VLANs, routage inter-VLAN, durcissement firewall interne</p>
+        </div>
+        <div class="timeline-item high">
+          <h4>Phase 3 - Modernisation OS</h4>
+          <div class="timeline-period">Mois 5-6</div>
+          <p>Migration, hardening, deploiement EDR, formation equipes</p>
+        </div>
+        <div class="timeline-item standard">
+          <h4>Phase 4 - Monitoring et Automatisation</h4>
+          <div class="timeline-period">Mois 7-9</div>
+          <p>SIEM, patch management auto, tests automatiques, industrialisation sauvegardes</p>
+        </div>
+        <div class="timeline-item standard">
+          <h4>Phase 5 - Optimisation et Documentation</h4>
+          <div class="timeline-period">Mois 10-12</div>
+          <p>Audit conformite PSSI/CI, tests PRI complets, formation utilisateurs, documentation finale</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">13.2</span> Budget estimatif</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Poste budgetaire</th><th>Cout estime</th><th>Recurrent/an</th></tr></thead>
+        <tbody>
+          <tr><td>Firewall NGFW</td><td>[X] &euro;</td><td>Maintenance</td></tr>
+          <tr><td>VPN SSL / MFA</td><td>[X] &euro;</td><td>[X] &euro;/an</td></tr>
+          <tr><td>Licences OS (migration Windows Server 2022)</td><td>[X] &euro;</td><td>Support</td></tr>
+          <tr><td>Solution EDR/Antivirus</td><td>[X] &euro;/an</td><td>[X] &euro;/an</td></tr>
+          <tr><td>SIEM (solution PME ou cloud)</td><td>[X] &euro;/an</td><td>[X] &euro;/an</td></tr>
+          <tr><td>Sauvegarde cloud (3-2-1)</td><td>[X] &euro;/an</td><td>[X] &euro;/an</td></tr>
+          <tr><td>Formation equipes + sensibilisation utilisateurs</td><td>[X] &euro;</td><td>[X] &euro;/an</td></tr>
+          <tr><td>Audit externe pentest (tous les 2 ans)</td><td>[X] &euro;</td><td>Biennal</td></tr>
+          <tr><td>Consulting et accompagnement</td><td>[X] &euro;</td><td>Ponctuel</td></tr>
+          <tr style="border-top: 2px solid var(--primary); font-weight: 700;">
+            <td>TOTAL premiere annee</td><td>[X] &euro;</td><td></td>
+          </tr>
+          <tr style="font-weight: 700;">
+            <td>Couts recurrents annees suivantes</td><td></td><td>[X] &euro;/an</td>
+          </tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="info-box info">
+      <div class="info-title">Note</div>
+      Les montants sont a completer selon les devis obtenus aupres des fournisseurs et prestataires.
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

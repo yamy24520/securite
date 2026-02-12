@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des OS - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Gestion des OS</div>
+      <h1>2. Gestion des OS</h1>
+      <p class="page-subtitle">Migration, durcissement et protection des systemes [E02/E03 &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">NIS2 Art.21</span>
+        <span class="meta-tag info">CIS Benchmarks</span>
+        <span class="meta-tag info">PSSI 6.3</span>
+      </div>
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres &ndash; Gestion des OS</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">2.1</span> Migration et standardisation</h2>
+      <ul class="content-list">
+        <li>Migration des OS obsoletes vers versions supportees (ex. Windows Server 2022) &ndash; conf. NIS2 Art.21</li>
+        <li>Plan de migration progressive avec environnement de test pre-production</li>
+        <li>Application des benchmarks CIS (Center for Internet Security)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">2.2</span> Durcissement (Hardening)</h2>
+      <ul class="content-list">
+        <li>Desactivation des services inutiles</li>
+        <li>Restriction des protocoles obsoletes (SMBv1, TLS &lt; 1.2, RDP non protege)</li>
+        <li>Configuration des GPO de securite (Windows) ou equivalent</li>
+        <li>Credential Guard, Device Guard (Windows Server 2022)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">2.3</span> Gestion des correctifs (Patch Management)</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Criticite</th><th>Delai deploiement</th><th>Ref.</th><th>Commentaire</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Critique (CVSS &ge; 9)</strong></td><td>&le; 7 jours apres tests</td><td>NIS2 / DORA</td><td>Apres validation en pre-prod</td></tr>
+          <tr><td><strong>Important (CVSS 7-8.9)</strong></td><td>&le; 30 jours</td><td>PSSI 6.3</td><td>Tests non-regression obligatoires</td></tr>
+          <tr><td><strong>Optionnel (CVSS &lt; 7)</strong></td><td>Evaluation trimestrielle</td><td>PSSI 6.3</td><td>Selon criticite metier</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">2.4</span> Antivirus et EDR</h2>
+      <ul class="content-list">
+        <li>Antivirus avec mise a jour automatique (conf. PSSI 6.4) &ndash; Definitions toutes les 4h</li>
+        <li><strong>EDR (Endpoint Detection & Response)</strong> &ndash; Detection comportementale</li>
+        <li>Gestion centralisee et alertes temps reel vers le RSSI</li>
+        <li>Scans de vulnerabilites hebdomadaires automatises (ex. Rapid7, Nessus)</li>
+        <li>Priorisation selon criticite CVSS &ndash; Dashboard pour comite de securite</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Justifier vos choix techniques et mesures de durcissement specifiques au contexte.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

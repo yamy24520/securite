@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidentialite des Donnees - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Confidentialite des Donnees</div>
+      <h1>4. Confidentialite des Donnees</h1>
+      <p class="page-subtitle">Chiffrement, conformite RGPD et protection contre les fuites [E02/E03 &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">RGPD Art.5/32</span>
+        <span class="meta-tag info">NIS2 Art.21</span>
+        <span class="meta-tag info">PSSI</span>
+      </div>
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres &ndash; Confidentialite des donnees</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">4.1</span> Chiffrement</h2>
+      <h3>En transit</h3>
+      <ul class="content-list">
+        <li><strong>TLS 1.3 minimum</strong> pour tous les flux web (conf. PSSI / NIS2 Art.21)</li>
+        <li><strong>IPSec</strong> pour VPN site-a-site</li>
+        <li><strong>SMTP sur TLS</strong> pour messagerie (conf. Charte Informatique)</li>
+      </ul>
+      <h3>Au repos</h3>
+      <ul class="content-list">
+        <li><strong>BitLocker / chiffrement AES-256</strong> sur serveurs critiques (Niveaux 3 et 4)</li>
+        <li>Cles gerees via <strong>KMS centralise</strong> (Key Management Service)</li>
+        <li>Chiffrement des sauvegardes</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">4.2</span> Conformite RGPD</h2>
+      <ul class="content-list">
+        <li>Registre des traitements maintenu par le DPO (RGPD Art.30)</li>
+        <li>Analyses d'impact (PIA) pour traitements a risque eleve (RGPD Art.35)</li>
+        <li>Cartographie des flux de donnees personnelles</li>
+        <li>Procedures pour droits des personnes (acces, rectification, effacement) &ndash; delai 30 jours (RGPD Art.15-22)</li>
+        <li>Clauses RGPD obligatoires dans contrats sous-traitants (RGPD Art.28)</li>
+        <li><strong>Notification CNIL sous 72h</strong> en cas de violation (RGPD Art.33) / NIS2 Art.23</li>
+        <li>Audits periodiques de conformite</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">4.3</span> DLP &ndash; Data Loss Prevention</h2>
+      <ul class="content-list">
+        <li>Detection de donnees sensibles en sortie du perimetre</li>
+        <li>Blocage automatique selon politiques (ex. envoi BDD clients par email)</li>
+        <li>Alertes vers RSSI &ndash; Journalisation des tentatives bloquees</li>
+        <li>Interdiction d'envoi de mots de passe par email (Charte Informatique)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">4.4</span> Messagerie securisee</h2>
+      <ul class="content-list">
+        <li>Activation S/MIME pour echanges sensibles</li>
+        <li>Formation utilisateurs au chiffrement (Charte Informatique)</li>
+        <li>Filtrage antispam et anti-phishing au niveau passerelle</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Justifier les solutions de chiffrement et les mesures RGPD adaptees au contexte.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

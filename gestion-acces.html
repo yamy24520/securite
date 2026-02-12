@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Acces - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Gestion des Acces</div>
+      <h1>5. Gestion des Acces</h1>
+      <p class="page-subtitle">IAM, privileges, MFA et procedures [E02/E03 &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">NIS2 Art.21</span>
+        <span class="meta-tag info">PSSI 7.1/7.2</span>
+        <span class="meta-tag info">Charte Informatique</span>
+      </div>
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres &ndash; Gestion des acces</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">5.1</span> Gestion des identites (IAM)</h2>
+      <ul class="content-list">
+        <li><strong>Comptes nominatifs obligatoires</strong> &ndash; Aucun compte generique sans exception documentee (Charte Informatique / PSSI 7.1)</li>
+        <li>Desactivation automatique des comptes inactifs (seuil : [X] jours)</li>
+        <li>Separation comptes utilisateur / administrateur</li>
+        <li>Active Directory renforce &ndash; GPO de securite</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">5.2</span> Politique de mots de passe</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Parametre</th><th>Utilisateurs</th><th>Administrateurs</th></tr></thead>
+        <tbody>
+          <tr><td>Longueur min.</td><td>[X] caracteres avec complexite</td><td>[X] caracteres avec complexite</td></tr>
+          <tr><td>Renouvellement</td><td>[X] mois ou compromission (PSSI 7.2)</td><td>Tous les 6 mois (PSSI 7.2)</td></tr>
+          <tr><td>Historique</td><td>[X] derniers mots de passe</td><td>[X] derniers mots de passe</td></tr>
+          <tr><td>Verrouillage</td><td>Apres [X] tentatives</td><td>Apres [X] tentatives + alerte RSSI</td></tr>
+          <tr><td>Ref.</td><td>PSSI 7.2 / Charte Informatique</td><td>NIS2 Art.21 / PSSI 7.2</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">5.3</span> Gestion des privileges (PAM)</h2>
+      <ul class="content-list">
+        <li><strong>PAM (Privileged Access Management)</strong> &ndash; Tracabilite et enregistrement des sessions admin</li>
+        <li>Principe du moindre privilege (PSSI / NIS2 Art.21)</li>
+        <li>Droits d'acces par role metier &ndash; Revue trimestrielle des habilitations (PSSI 7.1)</li>
+        <li>Workflow de demande/validation via outil de ticketing</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">5.4</span> MFA &ndash; Authentification Multi-Facteurs</h2>
+      <h3>Deploiement par phases</h3>
+      <ul class="content-list">
+        <li><strong>Phase 1</strong> : Administrateurs et acces VPN (prioritaire)</li>
+        <li><strong>Phase 2</strong> : Acces applications critiques (metier, donnees sensibles)</li>
+        <li><strong>Phase 3</strong> : Tous les acces distants</li>
+      </ul>
+      <p><strong>Technologies :</strong> TOTP (Google/Microsoft Authenticator), tokens materiels pour comptes ultra-sensibles</p>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">5.5</span> Procedures d'arrivee / depart</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Onboarding (Arrivee)</th><th>Offboarding (Depart) &ndash; Charte Informatique 4.5</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>
+              &bull; Demande RH validee par manager<br>
+              &bull; Creation compte AD + attributions RBAC<br>
+              &bull; Remise equipements (inventories)<br>
+              &bull; Signature Charte Informatique<br>
+              &bull; Formation securite initiale
+            </td>
+            <td>
+              &bull; Desactivation compte J-1 ou J0<br>
+              &bull; Restitution equipements<br>
+              &bull; Revocation acces VPN, applications, AD<br>
+              &bull; Suppression donnees personnelles (delai 3 mois)<br>
+              &bull; Redirection messagerie (max 6 mois)
+            </td>
+          </tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Decrire la politique IAM adaptee au contexte de l'entreprise.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

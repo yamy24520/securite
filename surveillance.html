@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surveillance Securite - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Surveillance Securite</div>
+      <h1>8. Surveillance de la Securite</h1>
+      <p class="page-subtitle">Monitoring continu, detection d'intrusion et threat intelligence [E04-B &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">NIS2 Art.21</span>
+        <span class="meta-tag info">DORA Art.11</span>
+        <span class="meta-tag info">PSSI</span>
+      </div>
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres B &ndash; Surveillance de la securite</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">8.1</span> Monitoring continu</h2>
+      <ul class="content-list">
+        <li>Supervision technique 24/7 (Nagios / Zabbix / PRTG ou equivalent)</li>
+        <li>Disponibilite des services : objectif uptime &ge; 99.5% (conf. DORA Art.11)</li>
+        <li>Performance : CPU, RAM, disque (seuils : 80% warning / 90% critical)</li>
+        <li>Certificats SSL : renouvellement automatique &ndash; alertes 30j avant expiration</li>
+        <li>KPI securite : nb incidents/mois, delai correction vulnerabilites, taux conformite patch, couverture antivirus</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">8.2</span> Detection d'intrusion (IDS/IPS)</h2>
+      <ul class="content-list">
+        <li>IPS integre au NGFW (perimetre reseau)</li>
+        <li>HIDS (Host-based IDS) sur serveurs critiques (agents)</li>
+        <li>Regles personnalisees selon le contexte et les actifs metier</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">8.3</span> Threat Intelligence</h2>
+      <ul class="content-list">
+        <li>Abonnement aux flux CTI (Cyber Threat Intelligence)</li>
+        <li>Indicateurs de compromission (IoC) &ndash; Integration SIEM</li>
+        <li>Veille sur les menaces sectorielles (conf. NIS2 Art.21)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">8.4</span> SOC &ndash; Security Operations Center</h2>
+      <ul class="content-list">
+        <li><strong>Option interne</strong> : equipe technique + RSSI (petite structure)</li>
+        <li><strong>Option externalisee</strong> : SOC as a Service &ndash; Couverture 24/7 recommandee</li>
+        <li>Missions : surveillance continue, analyse incidents N1, escalade, rapports mensuels</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Decrire le dispositif de surveillance de la securite adapte a la taille de l'organisation.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

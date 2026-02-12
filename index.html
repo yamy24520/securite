@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier de Securisation de l'Infrastructure - M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo">
+        <div class="logo-icon">S</div>
+        <div>
+          <div class="logo-text">GlobalSecurity</div>
+          <div class="logo-sub">Infrastructure Securisee</div>
+        </div>
+      </a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li>
+          <li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li>
+          <li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li>
+          <li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li>
+          <li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li>
+          <li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li>
+          <li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li>
+          <li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li>
+          <li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li>
+          <li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li>
+          <li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li>
+          <li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li>
+          <li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li>
+          <li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li>
+          <li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <div class="home-hero">
+      <h1>Dossier de Securisation de l'Infrastructure</h1>
+      <p class="hero-sub">Module M11 &mdash; Infrastructure Securisee</p>
+      <span class="hero-module">Conforme RGPD &middot; NIS2 &middot; DORA &middot; PSSI &middot; CIS</span>
+    </div>
+
+    <!-- Infos generales -->
+    <div class="section-card">
+      <h2><span class="section-icon">i</span> Informations generales</h2>
+      <dl class="def-grid">
+        <dt>Client</dt>
+        <dd>[NOM DE L'ENTREPRISE]</dd>
+        <dt>Consultant Securite</dt>
+        <dd>[Prenom NOM]</dd>
+        <dt>Date</dt>
+        <dd>[JJ Mois AAAA]</dd>
+        <dt>Version</dt>
+        <dd>1.0 &mdash; Draft</dd>
+        <dt>Entreprise</dt>
+        <dd>[Nom de l'organisation]</dd>
+        <dt>Secteur d'activite</dt>
+        <dd>[Secteur &ndash; ex : PME industrielle, cabinet medical, collectivite...]</dd>
+        <dt>Effectif</dt>
+        <dd>[Nombre de collaborateurs / utilisateurs SI]</dd>
+        <dt>Contexte SI actuel</dt>
+        <dd>[Decrire l'infrastructure existante : OS, reseau, serveurs, cloud...]</dd>
+        <dt>Problematiques</dt>
+        <dd>[Failles, non-conformites, risques critiques actuels]</dd>
+        <dt>Perimetre</dt>
+        <dd>[Systemes et services couverts par ce dossier]</dd>
+      </dl>
+    </div>
+
+    <!-- Referentiels -->
+    <div class="section-card">
+      <h2><span class="section-icon">R</span> Referentiels reglementaires applicables</h2>
+      <p>Ce dossier s'appuie sur les referentiels suivants :</p>
+      <ul class="content-list">
+        <li><strong>RGPD (UE 2016/679)</strong> &ndash; Protection des donnees personnelles : Art.5 (principes), Art.25 (Privacy by Design), Art.32 (securite des traitements), Art.33/34 (notification de violations)</li>
+        <li><strong>NIS (Directive 2016/1148) et NIS2 (Directive 2022/2555)</strong> &ndash; Art.21 : gestion des risques, continuite, chaine d'approvisionnement, gestion des incidents, Art.23 : notification</li>
+        <li><strong>DORA (Reglement UE 2022/2554)</strong> &ndash; Resilience operationnelle numerique : Art.5 (gouvernance ICT), Art.11 (continuite), Art.12 (sauvegarde/recuperation), Art.28 (risques tiers)</li>
+        <li><strong>PSSI de l'organisation</strong> &ndash; Politique de Securite des Systemes d'Information interne</li>
+        <li><strong>Charte Informatique</strong> &ndash; Regles d'usage du SI pour les utilisateurs</li>
+        <li><strong>Benchmarks CIS (Center for Internet Security)</strong> &ndash; Durcissement OS et equipements</li>
+        <li><strong>EBIOS Risk Manager (ANSSI)</strong> &ndash; Methode d'analyse de risque</li>
+      </ul>
+    </div>
+
+    <!-- Resume enjeux -->
+    <div class="section-card">
+      <h2><span class="section-icon">E</span> Resume des enjeux et objectifs de securite</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Ce champ doit etre complete avec les enjeux et objectifs de securite specifiques a l'organisation ciblee.
+      </div>
+    </div>
+
+    <!-- Navigation par sections -->
+    <h2 style="margin-bottom:1rem; font-size:1.3rem; color:var(--primary);">Sommaire du dossier</h2>
+
+    <div class="card-grid">
+      <a href="matrice-risques.html" class="nav-card">
+        <div class="card-num">Section 0</div>
+        <div class="card-title">Matrice de Risque</div>
+        <div class="card-desc">Identification des menaces, evaluation probabilite/impact, priorisation des mesures. Methode EBIOS Risk Manager.</div>
+        <div class="card-footer">12 risques identifies &rarr;</div>
+      </a>
+      <a href="gestion-reseau.html" class="nav-card">
+        <div class="card-num">Section 1</div>
+        <div class="card-title">Gestion du Reseau</div>
+        <div class="card-desc">Segmentation VLAN, securite perimetrique NGFW, acces distant securise VPN+MFA.</div>
+        <div class="card-footer">E02/E03 &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="gestion-os.html" class="nav-card">
+        <div class="card-num">Section 2</div>
+        <div class="card-title">Gestion des OS</div>
+        <div class="card-desc">Migration, durcissement (hardening), patch management, antivirus et EDR.</div>
+        <div class="card-footer">E02/E03 &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="gestion-data.html" class="nav-card">
+        <div class="card-num">Section 3</div>
+        <div class="card-title">Gestion des Data</div>
+        <div class="card-desc">Classification des donnees, stockage, archivage, niveaux de criticite et SLA.</div>
+        <div class="card-footer">E02/E03 &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="confidentialite.html" class="nav-card">
+        <div class="card-num">Section 4</div>
+        <div class="card-title">Confidentialite des Donnees</div>
+        <div class="card-desc">Chiffrement, conformite RGPD, DLP, messagerie securisee.</div>
+        <div class="card-footer">E02/E03 &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="gestion-acces.html" class="nav-card">
+        <div class="card-num">Section 5</div>
+        <div class="card-title">Gestion des Acces</div>
+        <div class="card-desc">IAM, politique mots de passe, PAM, MFA, procedures arrivee/depart.</div>
+        <div class="card-footer">E02/E03 &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="sauvegardes.html" class="nav-card">
+        <div class="card-num">Section 6</div>
+        <div class="card-title">Sauvegardes</div>
+        <div class="card-desc">Strategie 3-2-1, plan de sauvegarde par criticite, tests de restauration.</div>
+        <div class="card-footer">E02/E03 &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="tracabilite.html" class="nav-card">
+        <div class="card-num">Section 7</div>
+        <div class="card-title">Tracabilite des Acces</div>
+        <div class="card-desc">Journalisation (logging), SIEM, centralisation et correlation des logs.</div>
+        <div class="card-footer">E04-A &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="surveillance.html" class="nav-card">
+        <div class="card-num">Section 8</div>
+        <div class="card-title">Surveillance Securite</div>
+        <div class="card-desc">Monitoring continu, IDS/IPS, Threat Intelligence, SOC.</div>
+        <div class="card-footer">E04-B &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="gestion-changements.html" class="nav-card">
+        <div class="card-num">Section 9</div>
+        <div class="card-title">Gestion des Changements</div>
+        <div class="card-desc">Processus ITIL, separation des environnements, CMDB.</div>
+        <div class="card-footer">E04-C &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="monitoring.html" class="nav-card">
+        <div class="card-num">Section 10</div>
+        <div class="card-title">Monitoring</div>
+        <div class="card-desc">Supervision infrastructure, monitoring applicatif, alerting securite.</div>
+        <div class="card-footer">E04-D &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="tests.html" class="nav-card">
+        <div class="card-num">Section 11</div>
+        <div class="card-title">Tests Automatiques</div>
+        <div class="card-desc">Scans vulnerabilites, pentests, tests de continuite PRI/PCA.</div>
+        <div class="card-footer">E04/E06-E &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="mises-a-jour.html" class="nav-card">
+        <div class="card-num">Section 12</div>
+        <div class="card-title">Mises a Jour</div>
+        <div class="card-desc">Politique de patching, automatisation WSUS/SCCM, antivirus, documentation.</div>
+        <div class="card-footer">E04-F &ndash; /5 pts &rarr;</div>
+      </a>
+      <a href="plan-budget.html" class="nav-card">
+        <div class="card-num">Section 13</div>
+        <div class="card-title">Plan & Budget</div>
+        <div class="card-desc">Phasage de deploiement sur 12 mois, budget estimatif detaille.</div>
+        <div class="card-footer">5 phases &rarr;</div>
+      </a>
+      <a href="conclusion.html" class="nav-card">
+        <div class="card-num">Section 14</div>
+        <div class="card-title">Conclusion</div>
+        <div class="card-desc">Synthese, points cles, prochaines etapes et signatures.</div>
+        <div class="card-footer">Synthese finale &rarr;</div>
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

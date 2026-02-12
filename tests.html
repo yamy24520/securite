@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tests Automatiques - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Tests Automatiques</div>
+      <h1>11. Tests Automatiques</h1>
+      <p class="page-subtitle">Scans de vulnerabilites, pentests et tests de continuite [E04/E06-E &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">NIS2 Art.21</span>
+        <span class="meta-tag info">PSSI 1.2</span>
+        <span class="meta-tag info">DORA Art.11/12</span>
+      </div>
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres E &ndash; Tests automatiques</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">11.1</span> Tests de securite automatises</h2>
+      <ul class="content-list">
+        <li>Scans de vulnerabilites hebdomadaires automatises (ex. Rapid7, Nessus, OpenVAS)</li>
+        <li>Scope : tous les systemes en production</li>
+        <li>Rapport automatique avec priorisation CVSS et workflow de remediation integre</li>
+        <li>Verification compliance benchmarks CIS &ndash; Detection de derives de configuration</li>
+        <li>Rapport mensuel au comite de securite</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">11.2</span> Tests d'intrusion (Pentest)</h2>
+      <ul class="content-list">
+        <li>Audit externe tous les 2 ans (PSSI 1.2 / NIS2 Art.21)</li>
+        <li>Tests internes annuels par equipe technique ou prestataire</li>
+        <li>Scenarios : externe, interne, phishing, social engineering</li>
+        <li>Rapport de pentest avec plan de remediation priorise</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">11.3</span> Tests de continuite (PRI/PCA)</h2>
+      <ul class="content-list">
+        <li>Tests trimestriels de restauration sur serveurs critiques (PSSI 6.5 / DORA Art.12)</li>
+        <li>Simulation annuelle de sinistre majeur &ndash; Implication : equipe technique + direction + utilisateurs cles</li>
+        <li>Tests de montee en charge avant mises en production majeures</li>
+        <li>Documentation des resultats et mise a jour PRI/PCA post-tests</li>
+        <li>Conf. DORA Art.11 : tests de resilience operationnelle numerique</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Decrire la strategie de tests automatiques et le plan de pentest envisage.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

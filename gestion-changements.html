@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Changements - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Gestion des Changements</div>
+      <h1>9. Gestion des Changements</h1>
+      <p class="page-subtitle">Processus ITIL, environnements et CMDB [E04-C &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">PSSI 6.3</span>
+        <span class="meta-tag info">DORA Art.9</span>
+        <span class="meta-tag info">ITIL</span>
+      </div>
+    </div>
+
+    <div class="info-box danger">
+      <div class="info-title">Regle absolue</div>
+      Aucun changement direct en production sans tests prealables (PSSI 6.3 / DORA Art.9)
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres C &ndash; Gestion des changements</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">9.1</span> Processus ITIL / Workflow de changement</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Etape</th><th>Acteur</th><th>Actions</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 &ndash; RFC</strong></td><td>Initiateur (tech / utilisateur)</td><td>Description, justification, impact, planification</td></tr>
+          <tr><td><strong>2 &ndash; Evaluation</strong></td><td>RSSI + RSSI</td><td>Analyse risques, classification Standard/Normal/Urgent</td></tr>
+          <tr><td><strong>3 &ndash; Validation</strong></td><td>CTO / Direction</td><td>Validation selon niveau (normaux : CTO / majeurs : Direction)</td></tr>
+          <tr><td><strong>4 &ndash; Planification</strong></td><td>Equipe technique</td><td>Fenetre de maintenance hors heures ouvrables, plan de rollback, communication</td></tr>
+          <tr><td><strong>5 &ndash; Deploiement</strong></td><td>Equipe technique</td><td>Tests pre-production (PSSI 6.3), deploiement selon procedure, documentation</td></tr>
+          <tr><td><strong>6 &ndash; Verification</strong></td><td>RSSI + metier</td><td>Validation fonctionnelle, verification securite (no regression), cloture RFC</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">9.2</span> Separation des environnements</h2>
+      <ul class="content-list">
+        <li><strong>Developpement/Test</strong> : validation fonctionnelle et securitaire</li>
+        <li><strong>Pre-production</strong> : replique de production pour tests finaux</li>
+        <li><strong>Production</strong> : environnement reel &ndash; Changements uniquement apres validation</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">9.3</span> CMDB &ndash; Gestion de configuration</h2>
+      <ul class="content-list">
+        <li>Inventaire exhaustif des actifs IT (CMDB &ndash; Configuration Management Database)</li>
+        <li>Relations et dependances entre composants</li>
+        <li>Historique des changements &ndash; Proprietaires et responsables</li>
+        <li>Mise a jour automatique quotidienne</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Decrire le processus de gestion des changements adapte a l'organisation.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Data - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Gestion des Data</div>
+      <h1>3. Gestion des Data</h1>
+      <p class="page-subtitle">Classification, stockage et archivage des donnees [E02/E03 &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">RGPD Art.5</span>
+        <span class="meta-tag info">DORA Art.12</span>
+        <span class="meta-tag info">PSSI</span>
+      </div>
+    </div>
+
+    <p>Conformement au RGPD Art.5 (integrite, confidentialite, minimisation) et DORA Art.12 (objectifs de recuperabilite), chaque donnee est associee a un niveau de criticite determinant ses exigences de protection, de disponibilite (RTO/RPO) et de retention.</p>
+
+    <div class="info-box info">
+      <div class="info-title">Legende</div>
+      RTO (Recovery Time Objective) = duree maximale d'indisponibilite toleree | RPO (Recovery Point Objective) = perte maximale de donnees toleree
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres &ndash; Gestion des donnees</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">3.1</span> Classification et criteres d'importance / SLA</h2>
+      <div class="table-wrapper"><table style="font-size: 0.75rem;">
+        <thead><tr><th>Niveau</th><th>Type de donnees</th><th>Exemples</th><th>Confidentialite</th><th>RTO</th><th>RPO</th><th>Retention</th><th>Chiffrement</th><th>Reglementations</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>4 &ndash; Critique</strong></td>
+            <td>Donnees clients, mots de passe, donnees RH, DSI</td>
+            <td>Dossiers clients, fiches RH, BDD applicative</td>
+            <td><span class="meta-tag critical">CONFIDENTIEL</span></td>
+            <td>4h</td>
+            <td>1h</td>
+            <td>5 ans min.</td>
+            <td>AES-256 obligatoire</td>
+            <td>RGPD Art.5/32, NIS2</td>
+          </tr>
+          <tr>
+            <td><strong>3 &ndash; Sensible</strong></td>
+            <td>Donnees financieres, contrats, projets</td>
+            <td>Devis, factures, plans projets, fichiers admin</td>
+            <td><span class="meta-tag high">RESTREINT</span></td>
+            <td>8h</td>
+            <td>4h</td>
+            <td>3 ans</td>
+            <td>AES-256 recommande</td>
+            <td>RGPD Art.5, DORA</td>
+          </tr>
+          <tr>
+            <td><strong>2 &ndash; Interne</strong></td>
+            <td>Documents de travail, communications internes</td>
+            <td>Emails internes, presentations, procedures</td>
+            <td><span class="meta-tag standard">INTERNE</span></td>
+            <td>24h</td>
+            <td>24h</td>
+            <td>1 an</td>
+            <td>Transit chiffre TLS</td>
+            <td>Charte SI</td>
+          </tr>
+          <tr>
+            <td><strong>1 &ndash; Public</strong></td>
+            <td>Documents publics, communications externes</td>
+            <td>Site web, plaquettes commerciales, CGV</td>
+            <td><span class="meta-tag info">PUBLIC</span></td>
+            <td>48h</td>
+            <td>48h</td>
+            <td>Duree projet</td>
+            <td>Non obligatoire</td>
+            <td>/</td>
+          </tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">3.2</span> Stockage et organisation</h2>
+      <ul class="content-list">
+        <li>Serveur de fichiers hierarchise selon la classification (Niveau 4 &rarr; chiffrement AES-256 obligatoire)</li>
+        <li>Integration SharePoint/Teams possible pour documents de niveaux 2-3</li>
+        <li>Versionning automatique et workflow de validation pour donnees critiques</li>
+        <li>Metadonnees de classification (tags de confidentialite)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">3.3</span> Gestion documentaire et archivage</h2>
+      <ul class="content-list">
+        <li>DMS (Document Management System) pour la tracabilite et le versionning</li>
+        <li>Conservation selon obligations reglementaires (RGPD registre de conservation)</li>
+        <li>Medias WORM (Write Once Read Many) pour donnees immuables</li>
+        <li>Respect des durees legales de retention (ex. RH : 5 ans, comptabilite : 10 ans)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Decrire la politique de classification et les mesures de protection associees au contexte.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

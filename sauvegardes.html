@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sauvegardes - GlobalSecurity M11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="header-logo"><div class="logo-icon">S</div><div><div class="logo-text">GlobalSecurity</div><div class="logo-sub">Infrastructure Securisee</div></div></a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <nav class="main-nav"><div class="nav-container"><ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li><li><a href="matrice-risques.html"><span class="nav-num">0</span>Risques</a></li><li><a href="gestion-reseau.html"><span class="nav-num">1</span>Reseau</a></li><li><a href="gestion-os.html"><span class="nav-num">2</span>OS</a></li><li><a href="gestion-data.html"><span class="nav-num">3</span>Data</a></li><li><a href="confidentialite.html"><span class="nav-num">4</span>Confidentialite</a></li><li><a href="gestion-acces.html"><span class="nav-num">5</span>Acces</a></li><li><a href="sauvegardes.html"><span class="nav-num">6</span>Sauvegardes</a></li><li><a href="tracabilite.html"><span class="nav-num">7</span>Tracabilite</a></li><li><a href="surveillance.html"><span class="nav-num">8</span>Surveillance</a></li><li><a href="gestion-changements.html"><span class="nav-num">9</span>Changements</a></li><li><a href="monitoring.html"><span class="nav-num">10</span>Monitoring</a></li><li><a href="tests.html"><span class="nav-num">11</span>Tests</a></li><li><a href="mises-a-jour.html"><span class="nav-num">12</span>MAJ</a></li><li><a href="plan-budget.html"><span class="nav-num">13</span>Plan</a></li><li><a href="conclusion.html"><span class="nav-num">14</span>Conclusion</a></li>
+    </ul></div></nav>
+  </header>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Sauvegardes</div>
+      <h1>6. Sauvegardes</h1>
+      <p class="page-subtitle">Strategie 3-2-1, plan de sauvegarde et tests de restauration [E02/E03 &ndash; /5]</p>
+      <div class="page-meta">
+        <span class="meta-tag info">PSSI 6.5</span>
+        <span class="meta-tag info">DORA Art.12</span>
+        <span class="meta-tag info">RGPD Art.5</span>
+      </div>
+    </div>
+
+    <div class="section-card grading-table">
+      <h2>Grille de notation</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Pts</th><th>Criteres &ndash; Sauvegardes</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Sujet non traite ou insuffisant pour etre pris en compte</td></tr>
+          <tr><td>2</td><td>Traite sans observation des bonnes pratiques ou erreur redhibitoire</td></tr>
+          <tr><td>3</td><td>Traite sans erreur redhibitoire, bonnes pratiques partiellement respectees</td></tr>
+          <tr><td>5</td><td>Traite de facon complete et conforme aux bonnes pratiques</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">6.1</span> Strategie 3-2-1 (conf. PSSI 6.5 / DORA Art.12)</h2>
+      <ul class="content-list">
+        <li><strong>3</strong> copies des donnees</li>
+        <li><strong>2</strong> supports differents (ex. disque local + disque distant)</li>
+        <li><strong>1</strong> copie hors site (cloud backup chiffre : Azure / AWS / OVH)</li>
+        <li>Protection ransomware : copies immuables (WORM) pour donnees critiques (Niveau 4)</li>
+        <li>Chiffrement AES-256 de toutes les sauvegardes</li>
+        <li>Acces restreint (admin backup uniquement) + monitoring integrite</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">6.2</span> Plan de sauvegarde &ndash; SLA par criticite</h2>
+      <div class="table-wrapper"><table>
+        <thead><tr><th>Actif</th><th>Criticite</th><th>Frequence</th><th>RTO</th><th>RPO</th><th>Retention</th><th>Ref.</th></tr></thead>
+        <tbody>
+          <tr><td>Controleur de domaine</td><td>4</td><td>Quotidienne</td><td>4h</td><td>1h</td><td>30j + 12 mens.</td><td>DORA Art.12 / PSSI 6.5</td></tr>
+          <tr><td>Donnees clients</td><td>4</td><td>Quotidienne</td><td>4h</td><td>1h</td><td>90j + 24 mens.</td><td>RGPD Art.5 / DORA Art.12</td></tr>
+          <tr><td>Serveur fichiers</td><td>3-4</td><td>Quotidienne</td><td>8h</td><td>4h</td><td>30j + 12 mens.</td><td>PSSI 6.5</td></tr>
+          <tr><td>Applications metier</td><td>3-4</td><td>Quotidienne</td><td>8h</td><td>4h</td><td>30j + 6 mens.</td><td>DORA Art.11</td></tr>
+          <tr><td>Serveurs secondaires</td><td>2</td><td>Hebdomadaire</td><td>24h</td><td>24h</td><td>30 jours</td><td>PSSI 6.5</td></tr>
+          <tr><td>Postes de travail</td><td>1</td><td>Selon besoin</td><td>48h</td><td>48h</td><td>Sur demande</td><td>Charte Informatique</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">6.3</span> Tests de restauration (PSSI 6.5 / DORA Art.12)</h2>
+      <ul class="content-list">
+        <li>Tests trimestriels sur serveurs critiques (Niveau 4)</li>
+        <li>Tests annuels sur l'ensemble de l'infrastructure</li>
+        <li>Scenarios : restauration fichier unique, restauration complete serveur, BMR (Bare Metal Recovery)</li>
+        <li>Restauration automatisee quotidienne de test avec validation d'integrite</li>
+        <li>Documentation des resultats et mise a jour des procedures si necessaire</li>
+        <li>Alertes automatiques en cas d'echec de sauvegarde ou de restauration</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2><span class="section-icon">N</span> Notes et justifications</h2>
+      <div class="info-box info">
+        <div class="info-title">A completer</div>
+        Justifier la strategie de sauvegarde et les tests adaptes au contexte.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Dossier de Securisation de l'Infrastructure &mdash; Module M11 &mdash; Version 1.0 Draft</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
